@@ -16,11 +16,10 @@ class Philosopher extends Thread {
     this.right = right;
     random = new Random();
     
-    this.rightHanded = rightHanded; 
     this.numCycles = numCycles; 
     this.thinkingTime = thinkingTime; 
     this.eatingTime = eatingTime; 
-    this.philsopherID = philosopherID; 
+    this.philosopherID = philosopherID; 
     this.rightHandIndex = rightHandIndex;
 
     if (numCycles == 0){
@@ -34,35 +33,35 @@ class Philosopher extends Thread {
       //all philosophers are right handed 
       //try grabbing right chopsticks first
 
-      if (rightHandIndex == 0){
-        while (thinkCount < cycles){
+      if (this.rightHandIndex == 0){
+        while (thinkCount < numCycles){
           ++thinkCount;
         }
         if (thinkCount % 10 == 0){
-          System.out.println("Philosopher " + philosopherID + " has thought " + thinkCount + " times");
-          int tt = nextInt(thinkTime);
-          System.out.println("Philosopher " + philosopherID + " thinks for " + tt + " units");
+          System.out.println("Philosopher " + this.philosopherID + " has thought " + this.thinkCount + " times");
+          int tt = nextInt(this.thinkingTime);
+          System.out.println("Philosopher " + this.philosopherID + " thinks for " + tt + " units");
           Thread.sleep(tt); 
           
           // The philosopher thinks for the given designated time. 
           
-          System.out.println("Philosopher" + philosopherID + "wants right chopstick.")
+          System.out.println("Philosopher" + this.philosopherID + "wants right chopstick.");
           
           //The philosopher, since right handed first goes for right hand.
           synchronized(right){
-            System.out.println("Philosopher" + philosopherID + "has right chopstick.")
-            System.out.println("Philosopher" + philosopherID + "wants left chopstick.")
+            System.out.println("Philosopher" + this.philosopherID + "has right chopstick.");
+            System.out.println("Philosopher" + this.philosopherID + "wants left chopstick.");
             synchronized(left){
-              System.out.println("Philosopher" + philosopherID + "has left chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "has left chopstick.");
               int et = nextInt(eatingTime);
-              System.out.println("Philosopher" + philosopherID + "eats for" + et + "units." )
+              System.out.println("Philosopher" + this.philosopherID + "eats for" + et + "units." );
               
               //Once the philosopher has both the chopsticks, they are ready to start eating 
               Thread.sleep(et);
             }
-            System.out.println("Philosopher" + philosopherID + "releases left chopstick.")
+            System.out.println("Philosopher" + this.philosopherID + "releases left chopstick.");
           }
-            System.out.println("Philosopher" + philosopherID + "releases right chopstick.")
+            System.out.println("Philosopher" + this.philosopherID + "releases right chopstick.");
           }
         }
 
@@ -80,30 +79,30 @@ class Philosopher extends Thread {
             ++thinkCount;
           }
           if (thinkCount % 10 == 0){
-            System.out.println("Philosopher " + philosopherID + " has thought " + thinkCount + " times");
+            System.out.println("Philosopher " + this.philosopherID + " has thought " + this.thinkCount + " times");
             int tt = nextInt(thinkTime);
-            System.out.println("Philosopher " + philosopherID + " thinks for " + tt + " units");
+            System.out.println("Philosopher " + this.philosopherID + " thinks for " + tt + " units");
             Thread.sleep(tt); 
             
             // The philosopher thinks for the given designated time. 
             
-            System.out.println("Philosopher" + philosopherID + "wants right chopstick.")
+            System.out.println("Philosopher" + this.philosopherID + "wants right chopstick.");
             
             //The philosopher, since right handed first goes for right hand.
             synchronized(right){
-              System.out.println("Philosopher" + philosopherID + "has right chopstick.")
-              System.out.println("Philosopher" + philosopherID + "wants left chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "has right chopstick.");
+              System.out.println("Philosopher" + this.philosopherID + "wants left chopstick.");
               synchronized(left){
-                System.out.println("Philosopher" + philosopherID + "has left chopstick.")
+                System.out.println("Philosopher" + this.philosopherID + "has left chopstick.");
                 int et = nextInt(eatingTime);
-                System.out.println("Philosopher" + philosopherID + "eats for" + et + "units." )
+                System.out.println("Philosopher" + this.philosopherID + "eats for" + et + "units." );
                 
                 //Once the philosopher has both the chopsticks, they are ready to start eating 
                 Thread.sleep(et);
               }
-              System.out.println("Philosopher" + philosopherID + "releases left chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "releases left chopstick.");
             }
-              System.out.println("Philosopher" + philosopherID + "releases right chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "releases right chopstick.");
             }
         }
 
@@ -115,34 +114,37 @@ class Philosopher extends Thread {
             ++thinkCount;
           }
           if (thinkCount % 10 == 0){
-            System.out.println("Philosopher " + philosopherID + " has thought " + thinkCount + " times");
+            System.out.println("Philosopher " + this.philosopherID + " has thought " + thinkCount + " times");
             int tt = nextInt(thinkTime);
-            System.out.println("Philosopher " + philosopherID + " thinks for " + tt + " units");
+            System.out.println("Philosopher " + this.philosopherID + " thinks for " + tt + " units");
             Thread.sleep(tt); 
             
             // The philosopher thinks for the given designated time. 
             
-            System.out.println("Philosopher" + philosopherID + "wants left chopstick.")
+            System.out.println("Philosopher" + this.philosopherID + "wants left chopstick.");
             
             //The philosopher, since left handed now, they first go for left hand chopstick.
             synchronized(left){
-              System.out.println("Philosopher" + philosopherID + "has left chopstick.")
-              System.out.println("Philosopher" + philosopherID + "wants right chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "has left chopstick.");
+              System.out.println("Philosopher" + this.philosopherID + "wants right chopstick.");
               synchronized(right){
-                System.out.println("Philosopher" + philosopherID + "has right chopstick.")
+                System.out.println("Philosopher" + this.philosopherID + "has right chopstick.");
                 int et = nextInt(eatingTime);
-                System.out.println("Philosopher" + philosopherID + "eats for" + et + "units." )
+                System.out.println("Philosopher" + this.philosopherID + "eats for" + et + "units." );
                 
                 //Once the philosopher has both the chopsticks, they are ready to start eating 
                 Thread.sleep(et);
               }
-              System.out.println("Philosopher" + philosopherID + "releases right chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "releases right chopstick.");
             }
-              System.out.println("Philosopher" + philosopherID + "releases left chopstick.")
+              System.out.println("Philosopher" + this.philosopherID + "releases left chopstick.");
             }
         }
 
       }
       }
-    } catch(InterruptedException e) {}
+    catch(InterruptedException e) {
+
+    }
   }
+}

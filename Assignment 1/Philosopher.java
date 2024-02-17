@@ -1,6 +1,4 @@
 import java.util.Random;
-import java.io.FileWriter;
-import java.io.IOException;
 
 class Philosopher extends Thread {
   private Chopstick left, right;
@@ -31,8 +29,7 @@ class Philosopher extends Thread {
   }
 
   public void run() {
-    String fileOutput = "Trace.txt";
-    
+ 
     try {
       //Case A: rightHandIndex == 0, 
       //all philosophers are right handed 
@@ -44,9 +41,9 @@ class Philosopher extends Thread {
         }
         if (thinkCount % 10 == 0){
           System.out.println("Philosopher " + pID + " has thought " + thinkCount + " times");
-          int tt = random.nextInt(this.thinkingTime);
-          System.out.println("Philosopher " + pID + " thinks for " + thinkingTime + " units");
-          Thread.sleep(thinkingTime); 
+          int thinkTime = random.nextInt(this.thinkingTime);
+          System.out.println("Philosopher " + pID + " thinks for " + thinkTime + " units");
+          Thread.sleep(thinkTime); 
           
           // The philosopher thinks for the given designated time. 
           
@@ -58,11 +55,11 @@ class Philosopher extends Thread {
             System.out.println("Philosopher" + pID + "wants left chopstick.");
             synchronized(left){
               System.out.println("Philosopher" + pID + "has left chopstick.");
-              int et = random.nextInt(eatingTime);
-              System.out.println("Philosopher" + pID + "eats for" + et + "units." );
+              int eatTime = random.nextInt(eatingTime);
+              System.out.println("Philosopher" + pID + "eats for" + eatTime + "units." );
               
               //Once the philosopher has both the chopsticks, they are ready to start eating 
-              Thread.sleep(eatingTime);
+              Thread.sleep(eatTime);
             }
             System.out.println("Philosopher" + pID + "releases left chopstick.");
           }
@@ -85,9 +82,9 @@ class Philosopher extends Thread {
           }
           if (thinkCount % 10 == 0){
             System.out.println("Philosopher " + pID + " has thought " + thinkCount + " times");
-            int tt = random.nextInt(thinkingTime);
+            int thinkTime = random.nextInt(thinkingTime);
             System.out.println("Philosopher " + pID + " thinks for " + thinkingTime + " units");
-            Thread.sleep(thinkingTime); 
+            Thread.sleep(thinkTime); 
             
             // The philosopher thinks for the given designated time. 
             
@@ -99,11 +96,11 @@ class Philosopher extends Thread {
               System.out.println("Philosopher" + this.pID + "wants left chopstick.");
               synchronized(left){
                 System.out.println("Philosopher" + this.pID + "has left chopstick.");
-                int et = random.nextInt(eatingTime);
-                System.out.println("Philosopher" + this.pID + "eats for" + eatingTime + "units." );
+                int eatTime = random.nextInt(eatingTime);
+                System.out.println("Philosopher" + this.pID + "eats for" + eatTime + "units." );
                 
                 //Once the philosopher has both the chopsticks, they are ready to start eating 
-                Thread.sleep(eatingTime);
+                Thread.sleep(eatTime);
               }
               System.out.println("Philosopher" + this.pID + "releases left chopstick.");
             }
@@ -120,9 +117,9 @@ class Philosopher extends Thread {
           }
           if (thinkCount % 10 == 0){
             System.out.println("Philosopher " + pID + " has thought " + thinkCount + " times");
-            int tt = random.nextInt(thinkingTime);
-            System.out.println("Philosopher " + pID + " thinks for " + thinkingTime + " units");
-            Thread.sleep(thinkingTime); 
+            int thinkTime = random.nextInt(thinkingTime);
+            System.out.println("Philosopher " + pID + " thinks for " + thinkTime + " units");
+            Thread.sleep(thinkTime); 
             
             // The philosopher thinks for the given designated time. 
             
@@ -134,11 +131,11 @@ class Philosopher extends Thread {
               System.out.println("Philosopher" + pID + "wants right chopstick.");
               synchronized(right){
                 System.out.println("Philosopher" + pID + "has right chopstick.");
-                int et = random.nextInt(eatingTime);
-                System.out.println("Philosopher" + pID + "eats for" + eatingTime + "units." );
+                int eatTime = random.nextInt(eatingTime);
+                System.out.println("Philosopher" + pID + "eats for" + eatTime + "units." );
                 
                 //Once the philosopher has both the chopsticks, they are ready to start eating 
-                Thread.sleep(eatingTime);
+                Thread.sleep(eatTime);
               }
               System.out.println("Philosopher" + pID + "releases right chopstick.");
             }

@@ -1,0 +1,111 @@
+oshitniraula@d-10-0-189-2 Assignment 1 % java DiningPhilosophers 2 1 3000 45 3  
+Philosopher 3 has thought 3000 times
+Philosopher 3 has thought 3000 times
+Philosopher 3 thinks for 6 units
+Philosopher 3 thinks for 16 units
+Philosopher3wants left chopstick.
+Philosopher3has left chopstick.
+Philosopher3wants right chopstick.
+Philosopher3has right chopstick.
+Philosopher3eats for0units.
+Philosopher3releases right chopstick.
+Philosopher3releases left chopstick.
+Philosopher3wants right chopstick.
+Philosopher3has right chopstick.
+Philosopher3wants left chopstick.
+Philosopher3has left chopstick.
+Philosopher3eats for0units.
+Philosopher3releases left chopstick.
+Philosopher3releases right chopstick.
+
+-------------------------------------------------------------------
+
+roshitniraula@d-10-0-189-2 Assignment 1 % java DiningPhilosophers 2 1 3000 4 2000
+Philosopher 2000 has thought 3000 times
+Philosopher 2000 has thought 3000 times
+Philosopher 2000 thinks for 4 units
+Philosopher 2000 thinks for 3 units
+Philosopher2000wants right chopstick.
+Philosopher2000wants right chopstick.
+Philosopher2000has right chopstick.
+Philosopher2000has right chopstick.
+Philosopher2000wants left chopstick.
+Philosopher2000wants left chopstick.
+
+-----------------------------------------------------
+roshitniraula@d-10-0-189-2 Assignment 1 % java DiningPhilosophers 2 1 3000 44 123
+Philosopher 123 has thought 3000 times
+Philosopher 123 has thought 3000 times
+Philosopher 123 thinks for 8 units
+Philosopher 123 thinks for 29 units
+Philosopher123wants left chopstick.
+Philosopher123has left chopstick.
+Philosopher123wants right chopstick.
+Philosopher123has right chopstick.
+Philosopher123eats for0units.
+Philosopher123releases right chopstick.
+Philosopher123releases left chopstick.
+Philosopher123wants right chopstick.
+Philosopher123has right chopstick.
+Philosopher123wants left chopstick.
+Philosopher123has left chopstick.
+Philosopher123eats for0units.
+Philosopher123releases left chopstick.
+Philosopher123releases right chopstick.
+
+----------------------------------------------------------
+roshitniraula@d-10-0-189-2 Assignment 1 % java DiningPhilosophers 3 1 2000 44 125
+Philosopher 125 has thought 2000 times
+Philosopher 125 has thought 2000 times
+Philosopher 125 has thought 2000 times
+Philosopher 125 thinks for 25 units
+Philosopher 125 thinks for 6 units
+Philosopher 125 thinks for 15 units
+Philosopher125wants left chopstick.
+Philosopher125has left chopstick.
+Philosopher125wants right chopstick.
+Philosopher125has right chopstick.
+Philosopher125eats for0units.
+Philosopher125releases right chopstick.
+Philosopher125releases left chopstick.
+Philosopher125wants left chopstick.
+Philosopher125has left chopstick.
+Philosopher125wants right chopstick.
+Philosopher125has right chopstick.
+Philosopher125eats for0units.
+Philosopher125releases right chopstick.
+Philosopher125releases left chopstick.
+Philosopher125wants right chopstick.
+Philosopher125has right chopstick.
+Philosopher125wants left chopstick.
+Philosopher125has left chopstick.
+Philosopher125eats for0units.
+Philosopher125releases left chopstick.
+Philosopher125releases right chopstick.
+
+----------------------------------------------------------------
+
+roshitniraula@d-10-0-189-2 Assignment 1 % java DiningPhilosophers 5 3 1000 500 22
+Philosopher 22 has thought 1000 times
+Philosopher 22 has thought 1000 times
+Philosopher 22 has thought 1000 times
+Philosopher 22 thinks for 500 units
+Philosopher 22 thinks for 500 units
+Philosopher 22 has thought 1000 times
+Philosopher 22 thinks for 500 units
+Philosopher 22 thinks for 324 units
+Philosopher 22 has thought 1000 times
+Philosopher 22 thinks for 500 units
+Philosopher22wants right chopstick.
+Philosopher22has right chopstick.
+Philosopher22wants left chopstick.
+Philosopher22has left chopstick.
+Philosopher22eats for0units.
+Philosopher22releases left chopstick.
+Philosopher22releases right chopstick.
+Philosopher22wants right chopstick.
+Philosopher22has right chopstick.
+Philosopher22wants left chopstick.
+Philosopher22wants left chopstick.
+
+-----------------------------------------------------
